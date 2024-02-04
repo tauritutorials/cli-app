@@ -40,6 +40,24 @@
         "width": 800,
         "height": 600
       }
-    ]
+    ],
+    "cli": {
+      "description": "",
+      "longDescription": "",
+      "beforeHelp": "",
+      "afterHelp": "",
+      "args": [],
+      "subcommands": {
+        "greet": {
+          "args": [
+            {
+              "name": "name",
+              "index": 1,
+              "takesValue": true
+            }
+          ]
+        }
+      }
+    }
   }
 }
