@@ -1,63 +1,63 @@
 {
-  "build": {
-    "beforeDevCommand": "bun run dev",
-    "beforeBuildCommand": "bun run build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist"
-  },
-  "package": {
-    "productName": "cli-app",
-    "version": "0.0.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
+    "build": {
+        "beforeDevCommand": "bun run dev",
+        "beforeBuildCommand": "bun run build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist"
     },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "com.tauri.dev",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
+    "package": {
+        "productName": "cli-app",
+        "version": "0.0.0"
     },
-    "security": {
-      "csp": null
-    },
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "cli-app",
-        "width": 800,
-        "height": 600
-      }
-    ],
-    "cli": {
-      "description": "",
-      "longDescription": "",
-      "beforeHelp": "",
-      "afterHelp": "",
-      "args": [],
-      "subcommands": {
-        "greet": {
-          "args": [
-            {
-              "name": "name",
-              "index": 1,
-              "takesValue": true
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "shell": {
+                "all": false,
+                "open": true
             }
-          ]
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "com.tauritutorials.www",
+            "icon": [
+                "icons/32x32.png",
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ]
+        },
+        "security": {
+            "csp": null
+        },
+        "windows": [
+            {
+                "fullscreen": false,
+                "resizable": true,
+                "title": "cli-app",
+                "width": 800,
+                "height": 600
+            }
+        ],
+        "cli": {
+            "description": "",
+            "longDescription": "",
+            "beforeHelp": "",
+            "afterHelp": "",
+            "args": [],
+            "subcommands": {
+                "greet": {
+                    "args": [
+                        {
+                            "name": "name",
+                            "index": 1,
+                            "takesValue": true
+                        }
+                    ]
+                }
+            }
         }
-      }
     }
-  }
 }
