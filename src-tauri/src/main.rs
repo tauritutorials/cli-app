@@ -19,7 +19,10 @@ fn main() {
                 Ok(matches) => {
                     handle_cli_matches(matches, app);
                 }
-                Err(_) => {}
+                Err(e) => {
+                    eprintln!("{}", e);
+                    std::process::exit(1);
+                }
             }
 
             Ok(())
@@ -43,8 +46,8 @@ fn handle_cli_matches(matches: Matches, app: &mut App) {
 
                 app.manage(Name(name));
             }
-            _ => {
-                std::process::exit(0);
+            cmd => {
+                unimplemented!("the dev hasn't implement a handler for the {} command", cmd);
             }
         }
     } else {
